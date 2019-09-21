@@ -1,0 +1,31 @@
+<header class="row">
+    <div class="col-12 pageHeader text-center">
+        <mat-icon>receipt</mat-icon>
+        <span>ITERIAM Recipes</span>
+    </div>
+    <div class="col-lg-7 col-sm-10 col-12" [ngClass]="searchContainerClass">
+        <button (click)="toggleOptions()" class="border-right border-primary text-primary">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-icon class="d-none d-sm-inline text-primary">search</mat-icon>
+        <input placeholder="Type here to search a recipe..." [(ngModel)]="searchText" (keyup)="doSearch()"
+            class="text-primary">
+    </div>
+    <div class="col-lg-7 col-sm-10 col-12 text-center text-primary" [ngClass]="searchOptionsClass">
+        <label id="searchOptions"> What do you want to search? </label><br>
+        <mat-radio-group aria-labelledby="searchOptions" [(ngModel)]="searchMode" (change)="doSearch()">
+            <mat-radio-button value="recipes" class="p-2"> Recipes </mat-radio-button>
+            <mat-radio-button value="ingredients" class="p-2"> Ingredients </mat-radio-button>
+        </mat-radio-group>
+    </div>
+</header>
+<section class="row">
+    <div [ngClass]="contentClass" class="col-12 col-sm-12">
+        <app-recipe [recipes]="response"></app-recipe>
+    </div>
+    <section class="row">
+        <div class="col-12 center" [ngClass]="spinnerClass">
+            <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+        </div>
+    </section>
+</section>

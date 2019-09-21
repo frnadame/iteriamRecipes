@@ -1,0 +1,78 @@
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+.pageHeader{
+    font-size: 40px;
+    color: aliceblue;
+}
+
+.pageHeader mat-icon{
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+
+.search-container{
+    margin: 0 auto;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    background-color: rgba(255,255,255,.85);
+    margin-bottom: 15px;
+}
+
+.search-container button, .search-container-opened button{
+    padding: 15px;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    background: transparent;
+    border-right-color: rgba(0,0,0,.12);
+    padding-left: 0px;
+    position: relative;
+}
+.search-container>mat-icon, .search-container-opened>mat-icon{
+    padding: 0px 10px;
+    width: 48px;
+    position: relative;
+}
+.search-container input, .search-container-opened input{
+    padding: 15px;
+    border: none;
+    background: transparent;
+    position: relative;
+    top: -3px;
+    width: 75%;
+}
+
+.search-container-opened{
+    margin: 0 auto;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    overflow: hidden;
+    background-color: rgba(255,255,255,.85);
+    z-index: 2;
+}
+
+.search-options{
+    overflow: hidden;
+    height: 0px;
+}
+.search-options-opened{
+    z-index: 1;
+    margin: 0 auto;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    background-color: rgba(255,255,255,.85);
+    margin-bottom: 15px;
+    padding-top: .5rem;
+    border-top:solid 1px #007bff;
+}
+
+.mat-radio-outer-circle{
+    border-color: #CCC !important;
+}

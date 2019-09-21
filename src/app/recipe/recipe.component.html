@@ -1,0 +1,15 @@
+<div *ngFor="let recipe of recipes" class="recipe">
+    <div class="flex-fixed-width-item align-middle">
+        <img src="{{recipe.thumbnail == '' ? 'assets/food-placeholder.png' : recipe.thumbnail}}" />
+    </div>
+    <div class="col-7 col-sm-10">
+        <div  class="flex-calc-width-item">
+            <a href="{{recipe.href}}" target="_blank" class="recipe-name">{{recipe.title}}</a>
+        </div>
+        <div class="d-none d-sm-block">
+            <span *ngFor="let ingredient of recipe.ingredients.split(',')" class="ingredient">
+                {{ingredient}}
+            </span>
+        </div>
+    </div>
+</div>
